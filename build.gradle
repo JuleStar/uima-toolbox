@@ -40,6 +40,28 @@ publishing {
 }
 
 
+task javadocJar(type: Jar) {
+	classifier = 'javadoc'
+	from javadoc
+}
+
+task sourcesJar(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+artifacts {
+	archives javadocJar, sourcesJar
+}
+
+if(hasProperty("signing.keyId")) {
+	// activate signing of artifacts, only if signing is configured properly
+	signing {
+		sign configurations.archives
+	}
+}
+
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
