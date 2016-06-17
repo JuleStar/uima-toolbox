@@ -37,12 +37,6 @@ public abstract class MultilineResource implements SharedResourceObject {
 						continue;
 					else if(line.isEmpty())
 						continue;
-					else if(line.endsWith(Constants.DASH)) {
-						if(line.length() == 1)
-							continue;
-						else
-							line = line.substring(0, line.length() - 1);
-					}
 						
 					doLine(lineNum, line);
 				}

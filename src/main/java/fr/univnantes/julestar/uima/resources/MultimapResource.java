@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MultimapResource extends MapResource {
+public abstract class MultimapResource extends MapResource {
 
 	protected Map<String, List<String>> values = new HashMap<String, List<String>>();
 	

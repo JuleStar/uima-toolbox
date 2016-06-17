@@ -59,4 +59,8 @@ public class MapResource extends TabResource {
 			break;
 		}
 	}
+	
+	public String getValueUnchecked(String key) {
+		return this.values.get(key);
+	}
 }
