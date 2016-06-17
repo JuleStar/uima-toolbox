@@ -41,7 +41,6 @@ public abstract class MultilineResource implements SharedResourceObject {
 					doLine(lineNum, line);
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
 				throw new ResourceInitializationException(e);
 			} finally {
 				IOUtils.closeQuietly(scanner);
