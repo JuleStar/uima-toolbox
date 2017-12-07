@@ -6,8 +6,11 @@ import java.util.List;
 public class ListResource extends MultilineResource {
 
 	private List<String> values = new ArrayList<String>();
-	
-	
+
+	public List<String> getValues() {
+		return values;
+	}
+
 	public boolean containsValue(String value) {
 		return values.contains(value);
 	}
